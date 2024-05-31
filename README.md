@@ -1,4 +1,4 @@
-# HavamalStanzas
+# Havamal Stanzas
 <br>
 
 ## Havamal Stanza of the Day
@@ -13,7 +13,7 @@ Welcome to the **Havamal Stanza of the Day** project! This is a simple webpage t
 
 ## Live Demo
 
-You can see the live demo of this project at [GitHub Pages](https://zalbright90.github.io/HavamalStanzas).
+You can see the live demo of this project at [GitHub Pages](https://zalbright90.github.io/HavamalStanzas) "not currently available".
 
 ## Getting Started
 
