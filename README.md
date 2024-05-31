@@ -1,6 +1,7 @@
 # HavamalStanzas
 <br>
- ## Havamal Stanza of the Day
+
+## Havamal Stanza of the Day
 
 Welcome to the **Havamal Stanza of the Day** project! This is a simple webpage that displays a different stanza from the Havamal each day, initially shown in Old Norse. Users can click or touch the stanza to toggle between the Old Norse and English translations.
 
