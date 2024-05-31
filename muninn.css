@@ -9,6 +9,12 @@ body {
     background: #000000;
 }
 
+.noto-sans-runic-regular {
+    font-family: "Noto Sans Runic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .background-container {
     position: fixed;
     width: 99%;
@@ -24,7 +30,7 @@ body {
 }
 
 .container {
-    text-align: relative;
+    text-align: center;
     z-index: 1;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
