@@ -16,12 +16,11 @@ const stanzas = [
         norse: "Stanza 4: Vatns er þörf þeim er til verðar kemr, þerru ok þjóðlaðar, góðs of æðis ef sér geta mætti orðs ok endrþögu.",
         english: "Stanza 4: Water is wanted for one who comes to dine - a handtowel and homely welcome, good nature with it - if he might get himself that! - talk and attentive silence."
     },
-    // Add more stanzas here...
+    // Add more stanzas here...165 in all.
 ];
 
-let currentLanguage = 'norse'; // Initially display in Old Norse
+let currentLanguage = 'norse';
 
-// Function to get the stanza of the day
 function getDailyStanza() {
     const date = new Date();
     const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
@@ -29,7 +28,6 @@ function getDailyStanza() {
     return stanzas[stanzaIndex];
 }
 
-// Function to toggle between Old Norse and English
 function toggleTranslation() {
     const stanzaElement = document.getElementById("stanza");
     const dailyStanza = getDailyStanza();
@@ -42,7 +40,6 @@ function toggleTranslation() {
     }
 }
 
-// Display the stanza of the day in Old Norse
 document.addEventListener("DOMContentLoaded", () => {
     const stanzaElement = document.getElementById("stanza");
     const dailyStanza = getDailyStanza();
