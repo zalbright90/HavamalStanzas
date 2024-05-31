@@ -1,4 +1,4 @@
-# HavamalStanzas
+# Havamal Stanzas
 <br>
 
 ## Havamal Stanza of the Day
