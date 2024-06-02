@@ -32,8 +32,8 @@ body {
 .container {
     text-align: center;
     z-index: 1;
-    padding: 20px;
-    background-image: url(../HavamalStanzas/vellum.jpg);
+    padding: 20px 20px 40px 20px;
+    background-image: url(../HavamalStanzas/vellum-75.png);
     border-radius: 8px;
     width: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
