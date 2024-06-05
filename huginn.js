@@ -65,10 +65,16 @@ const stanzas = [
 
 let currentLanguage = 'norse';
 
+function seededRandom(seed) {
+    var x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
+}
+
 function getDailyStanza() {
     const date = new Date();
     const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    const stanzaIndex = dayOfYear % stanzas.length;
+    const randomSeed = seededRandom(dayOfYear);
+    const stanzaIndex = Math.floor(randomSeed * stanzas.length);
     return stanzas[stanzaIndex];
 }
 
