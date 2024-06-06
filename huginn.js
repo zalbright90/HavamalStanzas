@@ -80,6 +80,26 @@ const stanzas = [
         norse: "Erindi 20: Gráðugr halr, nema geðs viti, etr sér aldrtrega; oft fær hlægis, er með horskum kemr, manni heimskum magi.",
         english: "Stanza 20: A greedy fellow, unless he has good sense, eats himself anguish for life. Often his stomach, when he joins the discerning, makes the foolish man mocked."
     },
+    {
+        norse: "Erindi 21: Hjarðir þat vitu, nær þær heim skulu, ok ganga þá af grasi; en ósviðr maðr kann ævagi síns of mál maga.",
+        english: "Stanza 21: The herds know when they have to be home and to go away then from the grass, but an imprudent man does not ever know where the size of his stomach stops."
+    },
+    {
+        norse: "Erindi 22: [Ósnjallr] maðr ok illa skapi hlær at hvívetna; hitki hann veit hittki hann veit, er hann vita þyrfti, at hann er[a] vamma vanr.",
+        english: "Stanza 22: An unintelligent man, and ill-natured, jeers at everything. This he does not know - what he needed to know - that he's not deficient in faults."
+    },
+    {
+        norse: "Erindi 23: Ósviðr maðr vakir um allar nætr ok hyggr at hvívetna; þá er móðr, er at morgni kemr, allt er víl sem var.",
+        english: "Stanza 23: An unintelligent man is awake every night thinking of everything. Then he's dead-tired when the daylight comes - the work is all as it was."
+    },
+    {
+        norse: "Erindi 24: Ósnotr maðr hyggr sér alla vera viðhlæjendr vini; hittki hann fiðr, þótt þeir um hann fár lesi, ef hann með snotrum sitr.",
+        english: "Stanza 24: A man of no knowledge imagines all are his friends who laugh along with him. He does not perceive that they pluck him to pieces, if he sits with men of sense."
+    },
+    {
+        norse: "Erindi 25: Ósnotr maðr hyggr sér alla vera viðhlæjendr vini; þá þat finnr, er at þingi kemr, at hann á formælendr fáa.",
+        english: "Stanza 25: A man of no knowledge imagines all are his friends who laugh along with him. Then he discovers, when it comes to the Assembly, he has few to speak for his suit."
+    }
     // Add more stanzas here...165 in all.
 ];
 
