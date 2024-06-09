@@ -99,7 +99,27 @@ const stanzas = [
     {
         norse: "Erindi 25: Ósnotr maðr hyggr sér alla vera viðhlæjendr vini; þá þat finnr, er at þingi kemr, at hann á formælendr fáa.",
         english: "Stanza 25: A man of no knowledge imagines all are his friends who laugh along with him. Then he discovers, when it comes to the Assembly, he has few to speak for his suit."
-    }
+    },
+    {
+        norse: "Erindi 26: Ósnotr maðr þykkisk allt vita, ef hann á sér í vá veru; hittki hann veit, hvat hann skal við kveða, ef hans freista firar.",
+        english: "Stanza 26: A man of no knowledge assumes he knows everything, if he lives his life in a corner. This he does not know - what answers he needs, if people confront him with questions."
+    },
+    {
+        norse: "Erindi 27: Ósnotr maðr, er með aldir kemr, þat er bazt, at hann þegi; engi þat veit, at hann ekki kann, nema hann mæli til margt; veit-a maðr, hinn er vettki veit, þótt hann mæli til margt.",
+        english: "Stanza 27: A man of no knowledge, when he mingles with men, it is best that he does not say anything. Nobody knows that he has no knowledge, unless he talks too much. A man who knows nothing does not know even that he is talking too much."
+    },
+    {
+        norse: "Erindi 28: Fróðr sá þykkisk, er fregna kann ok segja it sama; eyvitu leyna megu ýta synir, því er gengr um guma.",
+        english: "Stanza 28: He accounts himself wise, who can ask questions and answer them also. They can never keep secret - the sons of men - the gossip that goes round about people."
+    },
+    {
+        norse: "Erindi 29: Ærna mælir, sá er æva þegir, staðlausu stafi; hraðmælt tunga, nema haldendr eigi, oft sér ógótt of gelr.",
+        english: "Stanza 29: He utters enough unfounded statements, who never stays silent. A headlong tongue with none to hold it back often calls calamity on itself."
+    },
+    {
+        norse: "Erindi 30: At augabragði skal-a maðr annan hafa, þótt til kynnis komi; margr þá fróðr þykkisk, ef hann freginn er-at ok nái hann þurrfjallr þruma.",
+        english: "Stanza 30: No man superciliously must mock another, should he visit family or friends. Many a one may then be thought clever, if he is never questioned, and succeed in staying with his hide dry!"
+    },
     // Add more stanzas here...165 in all.
 ];
 
