@@ -120,6 +120,26 @@ const stanzas = [
         norse: "Erindi 30: At augabragði skal-a maðr annan hafa, þótt til kynnis komi; margr þá fróðr þykkisk, ef hann freginn er-at ok nái hann þurrfjallr þruma.",
         english: "Stanza 30: No man superciliously must mock another, should he visit family or friends. Many a one may then be thought clever, if he is never questioned, and succeed in staying with his hide dry!"
     },
+    {
+        norse: "Erindi 31: Fróðr þykkisk, sá er flótta tekr, gestr at gest hæðinn; veit-a görla, sá er of verði glissir, þótt hann með grömum glami.",
+        english: "Stanza 31: He's reckoned wise who beats a retreat - a guest who has mocked a guest. No man knows for sure, who makes taunts at table,that he's not uttering insolence amongenemies."
+    },
+    {
+        norse: "Erindi 32: Gumnar margir erusk gagnhollir, en at virði vrekask; aldar róg þat mun æ vera, órir gestr við gest.",
+        english: "Stanza 32: Many men, among themselves, are loyal friends, yet attack each other at table. Discord among men will never die: guest is maddened with guest."
+    },
+    {
+        norse: "Erindi 33: Árliga verðar skyli maðr oft fáa, nema til kynnis komi: str ok snópir, lætr sem solginn sé ok kann fregna at fáu.",
+        english: "Stanza 33: His meals early, a man ought always to take, when he is not visiting family or friends. He'll sit and sniff round, seem to be famished, and can find few questions to ask"
+    },
+    {
+        norse: "Erindi 34: Afhvarf mikit er til ills vinar, þótt á brautu búi, en til góðs vinar liggja gagnvegir, þótt hann sé firr farinn.",
+        english: "Stanza 34: It is a big detour to a bad friend's home, though he lives in your lane, but to a good friend's home the roads go straight, though he may be a longer way away."
+    },
+    {
+        norse: "Erindi 35: Ganga skal, skal-a gestr vera ey í einum stað; ljúfr verðr leiðr, ef lengi sitr annars fletjum á.",
+        english: "Stanza 35: Take his leave he must - not linger as a guest for ever in one place. Liked becomes loathed, if one sits for long on another fellow's floor."
+    }
     // Add more stanzas here...165 in all.
 ];
 
