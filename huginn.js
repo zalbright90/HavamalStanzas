@@ -664,8 +664,8 @@ const stanzas = [
         norse: "Erindi 165:",
         english: "Stanza 165:"
     }
+After English translation, store all on db and reconfigure*/        
 ];
-After English translation, store all on db and reconfigure*/
 
 let currentLanguage = 'norse';
 
