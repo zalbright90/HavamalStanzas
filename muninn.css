@@ -41,8 +41,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+#stanza {
+    font-size: 1.2em;
+    color: rgb(92, 1, 1);
+    cursor: pointer;
+    min-height: 100px;
+}
+
+#info-text {
+    color: rgb(92, 1, 1);
+    font-size:1em;
+    font-style:italic
+}
+
 .disclaimer {
     font-size: 0.9em;
+    font-style: italic;
     text-align: center;
     display: flex;
     margin: -20px auto;
@@ -66,11 +80,4 @@ footer {
     text-align: center;
     bottom: 0;
     width: 100%;
-}
-
-#stanza {
-    font-size: 1.2em;
-    color: rgb(92, 1, 1);
-    cursor: pointer;
-    min-height: 100px;
 }

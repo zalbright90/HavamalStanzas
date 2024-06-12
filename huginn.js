@@ -700,3 +700,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const dailyStanza = getDailyStanza();
     stanzaElement.textContent = dailyStanza.norse;
 });
+
+console.log('I fear for Huginn, that he come not back, yet more anxious am I for Muninn.')
