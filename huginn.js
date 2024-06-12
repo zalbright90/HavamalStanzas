@@ -139,7 +139,87 @@ const stanzas = [
     {
         norse: "Erindi 35: Ganga skal, skal-a gestr vera ey í einum stað; ljúfr verðr leiðr, ef lengi sitr annars fletjum á.",
         english: "Stanza 35: Take his leave he must - not linger as a guest for ever in one place. Liked becomes loathed, if one sits for long on another fellow's floor."
-    }
+    },
+    {
+        norse: "Erindi 36: Bú er betra, þótt lítit sé, halr er heima hverr; þótt tvær geitr eigi ok taugreftan sal, þat er þó betra en bæn.",
+        english: "Stanza 36: A homestead is better, even though it may be bare: every man is his own man at home. Though his assets are two goats and a tow-roofed home, that is still better than begging."
+    },
+    {
+        norse: "Erindi 37: Bú er betra, þótt lítit sé, halr er heima hverr; blóðugt er hjarta, þeim er biðja skal sér í mál hvert matar.",
+        english: "Stanza 37: A homestead is better, even though it may be bare: every man is his own man at home. Bleeding is the heart of one who must beg a morsel for himself every mealtime."
+    },
+    {
+        norse: "Erindi 38: Vápnum sínum skal-a maðr velli á feti ganga framar, því at óvíst er at vita, nær verðr á vegum úti geirs of þörf guma.",
+        english: "Stanza 38: Not a footstep from his weapons must a man wander over open land. For one does not know at all, out on the ways, when that man will be wanting his spear."
+    },
+    {
+        norse: "Erindi 39: Fannk-a ek mildan mann eða svá matar góðan, at væri-t þiggja þegit, eða síns féar svági [glöggvan], at leið sé laun, ef þægi.",
+        english: "Stanza 39: I never found a man so generous or so ungrudging with food, that to accept in return was not accepted; or of his possessions so prodigal that repayment was repugnant, should he receive it."
+    },
+    {
+        norse: "Erindi 40: Féar síns, er fengit hefr, skyli-t maðr þörf þola; oft sparir leiðum, þats hefr ljúfum hugat; margt gengr verr en varir.",
+        english: "Stanza 40: Of his own goods that he's gained, a man should not suffer shortage. Often, you save for those you don't like what you have meant for your loved ones - many a thing goes worse than you wait for!"
+    },
+    {
+        norse: "Erindi 41: Vápnum ok váðum skulu vinir gleðjask; þat er á sjalfum sýnst; viðrgefendr ok endrgefendr erusk lengst vinir, ef þat bíðr at verða vel.",
+        english: "Stanza 41: With arms and apparel friends shall delight each other - it shows on themselves most visibly. Givers who repay gifts, and give again, remain friends with each other longest - if that goes on going well!"
+    },
+    {
+        norse: "Erindi 42: Vin sínum skal maðr vinr vera ok gjalda gjöf við gjöf; hlátr við hlátri skyli hölðar taka en lausung við lygi.",
+        english: "Stanza 42: To his friend a man must be a friend and pay back gift with gift. Good men should take laughter with a laugh, but lying with a lie."
+    },
+    {
+        norse: "Erindi 43: Vin sínum skal maðr vinr vera, þeim ok þess vin; en óvinar síns skyli engi maðr vinar vinr vera.",
+        english: "Stanza 43: To his friend a man must be a friend, to him and to his friend. But of his enemy not any man should be a friend of that man's friend."
+    },
+    {
+        norse: "Erindi 44: Veiztu, ef þú vin átt, þann er þú vel trúir, ok vill þú af hánum gótt geta, geði skaltu við þann blanda ok gjöfum skipta, fara at finna oft.",
+        english: "Stanza 44: You know, if you have a friend, one you fully trust, and you aim to gain advantage from him, you must espouse his tastes, and give and takes gifts, set out to see him often."
+    },
+    {
+        norse: "Erindi 45: Ef þú átt annan, þanns þú illa trúir, vildu af hánum þó gótt geta, fagrt skaltu við þann mæla en flátt hyggja ok gjalda lausung við lygi.",
+        english: "Stanza 45: If you have another, whom you never trust, yet you aim to gain advantage from him, you must speak fair words to him, but think false thoughts and pay back lying with a lie."
+    },
+    {
+        norse: "Erindi 46:Það er enn of þann er þú illa trúir þér er grunr at hans geði, hlæja skaltu við þeim ok um hug mæla; glík skulu gjöld gjöfum.",
+        english: "Stanza 46: Also to note of the man you never trust well and have doubts of his disposition: you must jest with that man and speak your mind falsely - repayments must match the presents."
+    },
+    {
+        norse: "Erindi 47: Ungr var ek forðum, fór ek einn saman, þá varð ek villr vega; auðigr þóttumk, er ek annan fann, maðr er manns gaman.",
+        english: "Stanza 47: Óðinn ~ I was young once, I walked all on my own. Then I was lost on the ways. I thought I'd found wealth when I found another man. Man's joy is man."
+    },
+    {
+        norse: "Erindi 48: Mildir, fræknir menn bazt lifa, sjaldan sút ala; en ósnjallr maðr uggir hotvetna, sýtir æ glöggr við gjöfum.",
+        english: "Stanza 48: Liberal, fearless men live best - seldom nurse sorrow - but an unmanly man sees menace in everything - a niggard is always nervous of gifts."
+    },
+    {
+        norse: "Erindi 49: Váðir mínar gaf ek velli at tveim trémönnum; rekkar þat þóttusk, er þeir rift höfðu; neiss er nökkviðr halr.",
+        english: "Stanza 49: Óðinn ~ My clothes I have in the countryside to two twig-men. Great fellows they thought themselves when they had garments - a man is mortified naked."
+    },
+    {
+        norse: "Erindi 50: Hrörnar þöll, sú er stendr þorpi á, hlýr-at henni börkr né barr; svá er maðr, sá er manngi ann. Hvat skal hann lengi lifa?",
+        english: "Stanza 50: A young fir-tree shrivels that stands on stony ground, no bark nor pine-needle protects it. A man is like that whom nobody loves - how is he to live long?"
+    },
+    {
+        norse: "Erindi 51: Eldi heitari brennr með illum vinum friðr fimm daga, en þá sloknar, er inn sétti kemr, ok versnar allr vinskapr.",
+        english: "Stanza 51: Hotter than fire with bad friends infatuation burns for fives days, but then it dies down when the sixth day comes, and all the friendship festers."
+    },
+    {
+        norse: "Erindi 52: Mikit eitt skal-a manni gefa; oft kaupir sér í litlu lof, með halfum hleif ok með höllu keri fekk ek mér félaga.",
+        english: "Stanza 52: Óðinn ~ One does not need to give a man only a big gift: often one purchases praises for oneself with little. With half a loaf and a leaning cup I acquired for myself a comrade."
+    },
+    {
+        norse: "Erindi 53: Lítilla sanda lítilla sæva lítil eru geð guma; því allir menn urðu-t jafnspakir; half er öld hvar.",
+        english: "Stanza 53: By little sands of little seas the minds of men are little - for that reason not all men became equally clever: mankind is half-and-half of each kind."
+    },
+    {
+        norse: "Erindi 54: Meðalsnotr skyli manna hverr; æva til snotr sé; þeim er fyrða fegrst at lifa, er vel margt vitu.",
+        english: "Stanza 54: Middling wise must every man be, he should not be overwise ever. For those men living is most delightful, who know quite a lot of knowledge."
+    },
+    {
+        norse: "Erindi 55: Meðalsnotr skyli manna hverr, æva til snotr sé; því at snotrs manns hjarta verðr sjaldan glatt, ef sá er alsnotr, er á.",
+        english: "Stanza 55: Middling wise must every man be, he should not be overwise ever, for the heart of a wise man hardly ever becomes glad, if its owner is wise in everything."
+    },
     // Add more stanzas here...165 in all.
 ];
 
