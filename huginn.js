@@ -219,7 +219,7 @@ const stanzas = [
     {
         norse: "Erindi 55: Meðalsnotr skyli manna hverr, æva til snotr sé; því at snotrs manns hjarta verðr sjaldan glatt, ef sá er alsnotr, er á.",
         english: "Stanza 55: Middling wise must every man be, he should not be overwise ever, for the heart of a wise man hardly ever becomes glad, if its owner is wise in everything."
-    }
+    },
     {
         norse: "Erindi 56: Meðalsnotr skyli manna hverr, æva til snotr sé; örlög sín viti engi fyrir, þeim er sorgalausastr sefi.",
         english: "Stanza 56: Middling wise must every man be - he should not be overwise ever. Of his own fate let no man know beforehand - for him his mind is most free of sorrow."
