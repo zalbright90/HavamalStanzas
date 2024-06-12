@@ -701,4 +701,5 @@ document.addEventListener("DOMContentLoaded", () => {
     stanzaElement.textContent = dailyStanza.norse;
 });
 
-console.log('I fear for Huginn, that he come not back, yet more anxious am I for Muninn.')
+const message = 'I fear for Huginn, that he come not back, yet more anxious am I for Muninn.';
+console.log(message);
