@@ -10,23 +10,8 @@ Welcome to the **Havamal Stanza of the Day** project! This is a simple webpage t
 - Displays a new stanza each day based on the current date.
 - Initially shows the stanza in Old Norse.
 - Allows users to toggle between Old Norse and English translations by clicking or touching the stanza.
+- Currently working on a hover for the Old Norse translation converting to runes.
 
 ## Live Demo
 
-You can see the live demo of this project at [GitHub Pages](https://zalbright90.github.io/HavamalStanzas) "not currently available".
-
-## Getting Started
-
-### Prerequisites
-
-To run this project locally, you need to have the following installed:
-
-- Git
-- A web browser
-
-### Installation
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/zalbright90/HavamalStanzas.git
+You can see the live demo of this project at [GitHub Pages](https://zalbright90.github.io/HavamalStanzas).
