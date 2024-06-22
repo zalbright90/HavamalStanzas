@@ -690,13 +690,98 @@ function toggleTranslation() {
         stanzaElement.textContent = dailyStanza.norse;
         currentLanguage = 'norse';
     }
+    addRunicFunctionality();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const stanzaElement = document.getElementById("stanza");
     const dailyStanza = getDailyStanza();
     stanzaElement.textContent = dailyStanza.norse;
+    addRunicFunctionality();
 });
 
 const message = 'I fear for Huginn, that he come not back, yet more anxious am I for Muninn.';
 console.log(message);
+
+// Add letters until complete
+const runeMap = {
+    'a': 'ᚨ', 'á': 'ᚨ', 'b': 'ᛒ', 'c': 'ᚲ', 'd': 'ᛞ', 'e': 'ᛖ', 'é': 'ᛖ', 'f': 'ᚠ',
+    'g': 'ᚷ', 'h': 'ᚺ', 'i': 'ᛁ', 'í': 'ᛁ', 'j': 'ᛃ', 'k': 'ᚲ', 'l': 'ᛚ',
+    'm': 'ᛗ', 'n': 'ᚾ', 'o': 'ᛟ', 'ó': 'ᛟ', 'p': 'ᛈ', 'q': 'ᚲ', 'r': 'ᚱ',
+    's': 'ᛊ', 't': 'ᛏ', 'u': 'ᚢ', 'ú': 'ᚢ', 'v': 'ᚹ', 'w': 'ᚹ', 'x': 'ᚲᛊ',
+    'y': 'ᛃ', 'ý': 'ᛃ', 'z': 'ᛉ', 'æ': 'ᚨᛖ', 'ð': 'ᚦ', 'þ': 'ᚦ',
+    'ø': 'ᛟ', 'å': 'ᛟ'
+};
+
+function addRunicFunctionality() {
+    const stanzaElement = document.getElementById("stanza");
+    const text = stanzaElement.textContent;
+
+    const stanzaContainer = document.createElement('div');
+    stanzaContainer.className = 'stanza-container';
+    stanzaElement.parentNode.insertBefore(stanzaContainer, stanzaElement);
+    stanzaContainer.appendChild(stanzaElement);
+
+    const runicOverlay = document.createElement('div');
+    runicOverlay.className = 'runic-overlay';
+    runicOverlay.textContent = convertToRunes(text);
+    stanzaContainer.appendChild(runicOverlay);
+
+    stanzaElement.innerHTML = '';
+    
+    let previousRune = null;
+    
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const span = document.createElement('span');
+        span.textContent = char;
+        
+        const lowerChar = char.toLowerCase();
+        const currentRune = runeMap[lowerChar];
+        
+        if (currentRune) {
+            span.className = 'runic-text';
+            span.setAttribute('data-latin', currentRune);
+            addTouchEventListeners(span);
+        }
+        
+        stanzaElement.appendChild(span);
+    }
+}
+
+function addTouchEventListeners(element) {
+    element.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        this.classList.add('touch-active');
+    });
+
+    element.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        this.classList.remove('touch-active');
+    });
+}
+
+function convertToRunes(text) {
+    return text.split('').map(char => runeMap[char.toLowerCase()] || char).join('');
+}
+
+function addTouchEventListeners(element) {
+    element.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        this.classList.add('touch-active');
+    });
+
+    element.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        this.classList.remove('touch-active');
+    });
+}
+
+document.addEventListener('click', function(e) {
+    const runicElements = document.querySelectorAll('.runic-text');
+    runicElements.forEach(el => el.classList.remove('touch-active'));
+    
+    if (e.target.classList.contains('runic-text')) {
+        e.target.classList.add('touch-active');
+    }
+});

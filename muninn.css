@@ -6,6 +6,51 @@ body {
     background: #000000;
 }
 
+.stanza-container {
+    position: relative;
+}
+
+.runic-overlay {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    white-space: pre-wrap;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.runic-text {
+    position: relative;
+    display: inline-block;
+}
+
+.runic-text::after {
+    content: attr(data-latin);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.runic-text:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
 .noto-sans-runic-regular {
     font-family: "Noto Sans Runic", sans-serif;
     font-weight: 600;
@@ -111,5 +156,39 @@ footer {
 
     .disclaimer {
         font-size: 0.7em;
+    }
+}
+
+@media (hover: hover) {
+    .stanza-container:hover .runic-overlay {
+        display: block;
+    }
+}
+
+@media (hover: none) {
+    .runic-text {
+        position: relative;
+    }
+
+    .runic-text::after {
+        content: attr(data-latin);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 0.8em;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+    }
+
+    .runic-text.touch-active::after {
+        visibility: visible;
+        opacity: 1;
     }
 }
