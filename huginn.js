@@ -664,7 +664,6 @@ const stanzas = [
 /*
 After English translation, store all on db and reconfigure*/        
 
-
 let currentLanguage = 'norse';
 
 function seededRandom(seed) {
@@ -690,46 +689,23 @@ function toggleTranslation() {
         stanzaElement.textContent = dailyStanza.norse;
         currentLanguage = 'norse';
     }
-    addRunicFunctionality();
+    updateRunicTranslation();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function updateRunicTranslation() {
     const stanzaElement = document.getElementById("stanza");
-    const dailyStanza = getDailyStanza();
-    stanzaElement.textContent = dailyStanza.norse;
+    const runicTranslationElement = document.getElementById("runic-translation");
+    const text = stanzaElement.textContent;
+    
+    runicTranslationElement.textContent = convertToRunes(text);
     addRunicFunctionality();
-});
-
-const message = 'I fear for Huginn, that he come not back, yet more anxious am I for Muninn.';
-console.log(message);
-
-// Add letters until complete
-const runeMap = {
-    'a': 'ᚨ', 'á': 'ᚨ', 'b': 'ᛒ', 'c': 'ᚲ', 'd': 'ᛞ', 'e': 'ᛖ', 'é': 'ᛖ', 'f': 'ᚠ',
-    'g': 'ᚷ', 'h': 'ᚺ', 'i': 'ᛁ', 'í': 'ᛁ', 'j': 'ᛃ', 'k': 'ᚲ', 'l': 'ᛚ',
-    'm': 'ᛗ', 'n': 'ᚾ', 'o': 'ᛟ', 'ó': 'ᛟ', 'p': 'ᛈ', 'q': 'ᚲ', 'r': 'ᚱ',
-    's': 'ᛊ', 't': 'ᛏ', 'u': 'ᚢ', 'ú': 'ᚢ', 'v': 'ᚹ', 'w': 'ᚹ', 'x': 'ᚲᛊ',
-    'y': 'ᛃ', 'ý': 'ᛃ', 'z': 'ᛉ', 'æ': 'ᚨᛖ', 'ð': 'ᚦ', 'þ': 'ᚦ',
-    'ø': 'ᛟ', 'å': 'ᛟ', 'ö': 'ᛟ'
-};
+}
 
 function addRunicFunctionality() {
     const stanzaElement = document.getElementById("stanza");
     const text = stanzaElement.textContent;
 
-    const stanzaContainer = document.createElement('div');
-    stanzaContainer.className = 'stanza-container';
-    stanzaElement.parentNode.insertBefore(stanzaContainer, stanzaElement);
-    stanzaContainer.appendChild(stanzaElement);
-
-    const runicOverlay = document.createElement('div');
-    runicOverlay.className = 'runic-overlay';
-    runicOverlay.textContent = convertToRunes(text);
-    stanzaContainer.appendChild(runicOverlay);
-
     stanzaElement.innerHTML = '';
-    
-    let previousRune = null;
     
     for (let i = 0; i < text.length; i++) {
         const char = text[i];
@@ -747,18 +723,6 @@ function addRunicFunctionality() {
         
         stanzaElement.appendChild(span);
     }
-}
-
-function addTouchEventListeners(element) {
-    element.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        this.classList.add('touch-active');
-    });
-
-    element.addEventListener('touchend', function(e) {
-        e.preventDefault();
-        this.classList.remove('touch-active');
-    });
 }
 
 function convertToRunes(text) {
@@ -785,3 +749,34 @@ document.addEventListener('click', function(e) {
         e.target.classList.add('touch-active');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const stanzaElement = document.getElementById("stanza");
+    const dailyStanza = getDailyStanza();
+    stanzaElement.textContent = dailyStanza.norse;
+    updateRunicTranslation();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    
+    container.addEventListener('touchstart', function(e) {
+        this.classList.add('touch-active');
+    });
+
+    container.addEventListener('touchend', function(e) {
+        this.classList.remove('touch-active');
+    });
+});
+
+const runeMap = {
+    'a': 'ᚨ', 'á': 'ᚨ', 'b': 'ᛒ', 'c': 'ᚲ', 'd': 'ᛞ', 'e': 'ᛖ', 'é': 'ᛖ', 'f': 'ᚠ',
+    'g': 'ᚷ', 'h': 'ᚺ', 'i': 'ᛁ', 'í': 'ᛁ', 'j': 'ᛃ', 'k': 'ᚲ', 'l': 'ᛚ',
+    'm': 'ᛗ', 'n': 'ᚾ', 'o': 'ᛟ', 'ó': 'ᛟ', 'p': 'ᛈ', 'q': 'ᚲ', 'r': 'ᚱ',
+    's': 'ᛊ', 't': 'ᛏ', 'u': 'ᚢ', 'ú': 'ᚢ', 'v': 'ᚹ', 'w': 'ᚹ', 'x': 'ᚲᛊ',
+    'y': 'ᛃ', 'ý': 'ᛃ', 'z': 'ᛉ', 'æ': 'ᚨᛖ', 'ð': 'ᚦ', 'þ': 'ᚦ',
+    'ø': 'ᛟ', 'å': 'ᛟ', 'ö': 'ᛟ'
+};
+
+const message = 'I fear for Huginn, that he come not back, yet more anxious am I for Muninn.';
+console.log(message);
