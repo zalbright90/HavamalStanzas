@@ -42,6 +42,7 @@ body {
     cursor: pointer;
     min-height: 100px;
     margin-bottom: 1rem;
+    hyphens: auto;
 }
 
 #runic-translation {
