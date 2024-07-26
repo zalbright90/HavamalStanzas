@@ -726,7 +726,18 @@ function addRunicFunctionality() {
 }
 
 function convertToRunes(text) {
-    return text.split('').map(char => runeMap[char.toLowerCase()] || char).join('');
+    return text.split(' ').map(word => {
+        let lastRune = '';
+        return word.split('').map(char => {
+            const currentRune = runeMap[char.toLowerCase()] || char;
+            if (currentRune === lastRune) {
+                return '';
+            } else {
+                lastRune = currentRune;
+                return currentRune;
+            }
+        }).join('');
+    }).join(' ');
 }
 
 function addTouchEventListeners(element) {
