@@ -726,18 +726,27 @@ function addRunicFunctionality() {
 }
 
 function convertToRunes(text) {
-    return text.split(' ').map(word => {
-        let lastRune = '';
-        return word.split('').map(char => {
-            const currentRune = runeMap[char.toLowerCase()] || char;
-            if (currentRune === lastRune) {
-                return '';
-            } else {
-                lastRune = currentRune;
-                return currentRune;
-            }
-        }).join('');
-    }).join(' ');
+    const sentences = text.split(/[.!?]+/).filter(s => s.trim());
+    return sentences.map((sentence, index) => {
+        const words = sentence.trim().split(/\s+/);
+        const runicWords = words.map(word => {
+            let lastRune = '';
+            return word.split('')
+                .map(char => {
+                    const currentRune = runeMap[char.toLowerCase()] || char;
+                    if (currentRune === lastRune) {
+                        return '';
+                    } else {
+                        lastRune = currentRune;
+                        return currentRune;
+                    }
+                })
+                .join('')
+                .replace(/[^ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛈᛇᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ]/g, '');
+        }).filter(word => word.length > 0);
+        const processedSentence = runicWords.join('·');
+        return (index === 0 ? ':' : '') + processedSentence + ':';
+    }).join('');
 }
 
 function addTouchEventListeners(element) {
