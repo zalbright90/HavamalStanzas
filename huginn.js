@@ -82,25 +82,37 @@ function updateRunicTranslation() {
 function addRunicFunctionality() {
     const stanzaElement = document.getElementById("stanza");
     const text = stanzaElement.textContent;
+    const words = text.split(/\s+/);
 
     stanzaElement.innerHTML = '';
     
-    for (let i = 0; i < text.length; i++) {
-        const char = text[i];
-        const span = document.createElement('span');
-        span.textContent = char;
+    words.forEach((word, index) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'word';
         
-        const lowerChar = char.toLowerCase();
-        const currentRune = runeMap[lowerChar];
-        
-        if (currentRune) {
-            span.className = 'runic-text';
-            span.setAttribute('data-latin', currentRune);
-            addTouchEventListeners(span);
+        for (let i = 0; i < word.length; i++) {
+            const char = word[i];
+            const span = document.createElement('span');
+            span.textContent = char;
+            
+            const lowerChar = char.toLowerCase();
+            const currentRune = runeMap[lowerChar];
+            
+            if (currentRune) {
+                span.className = 'runic-text';
+                span.setAttribute('data-latin', currentRune);
+                addTouchEventListeners(span);
+            }
+            
+            wordSpan.appendChild(span);
         }
         
-        stanzaElement.appendChild(span);
-    }
+        stanzaElement.appendChild(wordSpan);
+        
+        if (index < words.length - 1) {
+            stanzaElement.appendChild(document.createTextNode(' '));
+        }
+    });
 }
 
 function convertToRunes(text) {
