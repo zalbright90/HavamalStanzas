@@ -2,22 +2,26 @@
     {
         "id": 1,
         "norse": "Erindi 1: Gáttir allar áðr gangi fram um skoðask skyli, um skyggnast skyli, því at óvíst er at vita hvar óvinir sitja á fleti fyrir.",
-        "english": "Stanza 1: All doorways before entering should be spied out, should be scrutinized, for it is not known for certain where enemies sit in wait in the hall ahead."
+        "english": "Stanza 1: All doorways before entering should be spied out, should be scrutinized, for it is not known for certain where enemies sit in wait in the hall ahead.",
+        "tiktokId": "7092964816507260203"
     },
     {
         "id": 2,
         "norse": "Erindi 2: Gefendr heilir! Gestr er inn kominn, hvar skal sitja sjá? Mjök er bráðr sá er á bröndum skal síns of freista frama.",
-        "english": "Stanza 2: 'Good fortune to givers! A guest has come in. Where has he to sit? He's full of fervour out by the fire-stack - a man who must vie for advancement!"
+        "english": "Stanza 2: 'Good fortune to givers! A guest has come in. Where has he to sit? He's full of fervour out by the fire-stack - a man who must vie for advancement!",
+        "tiktokId": "7092979775018585390"
     },
     {
         "id": 3,
         "norse": "Erindi 3: Elds er þörf þeims inn er kominn ok á kné kalinn. Matar ok váða er manni þörf, þeim er hefr um fjall farit.",
-        "english": "Stanza 3: Fire is wanted for the one who has come in, nipped with cold to the knee. A meal and clothes are a man's needs who's come across the fell."
+        "english": "Stanza 3: Fire is wanted for the one who has come in, nipped with cold to the knee. A meal and clothes are a man's needs who's come across the fell.",
+        "tiktokId": "7092979989817380142"
     },
     {
         "id": 4,
         "norse": "Erindi 4: Vatns er þörf þeim er til verðar kemr, þerru ok þjóðlaðar, góðs of æðis ef sér geta mætti orðs ok endrþögu.",
-        "english": "Stanza 4: Water is wanted for one who comes to dine - a handtowel and homely welcome, good nature with it - if he might get himself that! - talk and attentive silence."
+        "english": "Stanza 4: Water is wanted for one who comes to dine - a handtowel and homely welcome, good nature with it - if he might get himself that! - talk and attentive silence.",
+        "tiktokId": "7092980204926242090"
     },
     {
         "id": 5,
@@ -432,17 +436,20 @@
     {
         "id": 87,
        "norse": "Erindi 87: Sjúkum kalfi, sjalfráða þræli, völu vilmæli, val nýfelldum.",
-       "english": "Stanza 87: a sick calf, a self-willed thrall, fair words from a prophetess, the dead newly slain,"
+       "english": "Stanza 87: a sick calf, a self-willed thrall, fair words from a prophetess, the dead newly slain",
+       "tiktokId": "7100913310224125227"
     },
     {
         "id": 88,
        "norse": "Erindi 88: Akri ársánum trúi engi maðr né til snemma syni, - veðr ræðr akri. en vit syni; hætt er þeira hvárt.",
-       "english": "Stanza 88: a field sown early - let no man trust them, nor his son too soon - weather controls the field and wits the son - each of them has its risk."
+       "english": "Stanza 88: a field sown early - let no man trust them, nor his son too soon - weather controls the field and wits the son - each of them has its risk.",
+       "tiktokId": "7100913627284196651"
     },
     {
         "id": 89,
        "norse": "Erindi 89: Bróðurbana sínum þótt á brautu mæti, húsi hálfbrunnu, hesti alskjótum - þá er jór ónýtr, ef einn fótr brotnar - verði-t maðr svá tryggr at þessu trúi öllu.",
-       "english": "Stanza 89: his brother's killer, if he crosses his path, a half-burnt house, an over-speedy horse - the best is then useless if one foot breaks! Let no man be so trusting as to trust in all these!"
+       "english": "Stanza 89: his brother's killer, if he crosses his path, a half-burnt house, an over-speedy horse - the best is then useless if one foot breaks! Let no man be so trusting as to trust in all these!",
+       "tiktokId": "7100913446333451563"
     },
     {
         "id": 90,

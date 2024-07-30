@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Havamal Stanza of the Day</title>
+    <title>Hávamál Stanza of the Day</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="favicon" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="favicon" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="description" content="Discover daily Havamal stanzas with humorous insights by Huginn. Learn about Norse mythology with a modern twist.">
+    <meta name="keywords" content="Havamal, daily Havamal, Norse mythology, Huginn, Muninn, humorous Havamal, Norse poems, stanza, stanzas, Ursula Dronke">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="muninn.css">
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 <body>
-    <div class="background-container">
-        <div class="container">
-            <h1 id="ᚺᚨᚢᚨᛗᚨᛚ" class="noto-sans-runic-regular">ᚺᚨᚢᚨᛗᚨᛚ</h1>
+    <main class="background-container">
+        <section class="container" aria-labelledby="stanza-header">
+            <h1>ᚺᚨᚢᚨᛗᚨᛚ</h1>
+            <h2>Hávamál</h2>
             <h3>Words of Hávi 'The High One'</h3>
             <div id="stanza" onclick="toggleTranslation()"></div>
-            <div id="runic-translation"></div>
             <div id="info-text">Click text for English translation by Ursula Dronke</div>
+            <div id="runic-translation"></div>
+            <h3>^ Runic transliteration ^</h3>
+            <div id="message"></div>
+            <div class="tiktok-container">
+                <div id="tiktok-embed"></div>
+            </div>
         </div>
+    </main>
         <div class="disclaimer">
             <p>The content on this webpage includes selected excerpts from Ursula Dronke's translation of the Hávamál published by Oxford University Press. These excerpts are used strictly for educational purposes within a non-commercial context. Our goal is to share the wisdom and insights of the Hávamál with our community while respecting the intellectual property rights of the translator and publisher. 
-                We believe that sharing this content in a non-commercial, educational setting falls under fair use/fair dealing provisions. However, we are committed to adhering to copyright laws and are actively seeking formal permission for this usage.
-                If you are the copyright holder and have any concerns or require further information, please <a href="mailto:zalbright1990@hotmail.com">contact us.</a></p>
+            We believe that sharing this content in a non-commercial, educational setting falls under fair use/fair dealing provisions. However, we are committed to adhering to copyright laws and are actively seeking formal permission for this usage.
+            If you are the copyright holder and have any concerns or require further information, please <a href="mailto:prismpaletteproductions@gmail.com">contact us.</a></p>
         </div>
-        <footer><p>All rights belong to the respective copyright holders.</p></footer>
-    </div>
+        <footer><p>2024 Hávamál Daily Stanza Project. All rights belong to the respective copyright holders.</p></footer>
     <script src="huginn.js" defer></script>
 </body>
 </html>

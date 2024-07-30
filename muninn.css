@@ -1,20 +1,19 @@
 body {
     font-family: 'Helvetica', sans-serif;
-    height: 100vh;
     margin: 0;
     padding: 0;
     background: #000000;
 }
 
 .background-container {
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(../HavamalStanzas/odin.jpg);
+    background-image: url(odin.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,12 +27,12 @@ body {
     flex-direction: column;
     padding: 1.25rem;
     margin: 2.25rem auto;
-    background-image: url(../HavamalStanzas/vellum-75.png);
+    background-image: url(vellum-75.png);
     border-radius: 8px;
     width: 90%;
     max-width: 600px;
-    min-height: 150px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
 }
 
 #stanza {
@@ -42,6 +41,7 @@ body {
     cursor: pointer;
     min-height: 100px;
     margin-bottom: 1rem;
+    padding: 9px;
     hyphens: auto;
 }
 
@@ -52,7 +52,6 @@ body {
     color: rgb(92, 1, 1);
     margin-top: 1rem;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     word-break: break-word;
 }
@@ -85,6 +84,14 @@ body {
     opacity: 1;
 }
 
+#message {
+    display: flex;
+    justify-content: center;
+    color: rgb(100, 8, 8);
+    font: 1.5rem bold;
+    padding: 10px;
+}
+
 #info-text {
     color: rgb(100, 8, 8);
     font-size: 0.9em;
@@ -101,16 +108,63 @@ body {
     max-width: 600px;
 }
 
+h1, h2, h3 {
+    font-family: "Noto Sans Runic", sans-serif;
+    margin: -2px auto;
+}
+
 h1 {
     margin-bottom: 0.5rem;
     color: rgb(92, 1, 1);
-    font-size: 2em;
+    font-size: 2rem;
+}
+
+h2 {
+    color: rgb(92, 1, 1);
+    font-size: 1.5rem;
 }
 
 h3 {
     margin-bottom: 0.5rem;
     color: rgb(92, 1, 1);
-    font-size: 1.2em;
+    font-size: 1.2rem;
+}
+
+.tiktok-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.tiktok-embed {
+    width: 100%;
+    max-width: 325px;
+    border-radius: 9px;
+    border: 9px ridge rgb(92, 1, 1);
+    box-shadow: 12px 12px 1rem;
+}
+
+.tiktok-embed iframe {
+    border: none !important;
+    width: 100% !important;
+    max-width: 325px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;  
+    max-height: 90vh !important; 
+}
+
+.tiktok-embed {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.tiktok-embed::before,
+.tiktok-embed::after {
+    display: none !important;
 }
 
 footer {
@@ -146,5 +200,32 @@ footer {
 
     .disclaimer {
         font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-container {
+        min-height: 100vh; 
+        background-size: auto; 
+    }
+
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .disclaimer, footer {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .background-container {
+        min-height: 100vh;
+        background-size: cover; /* Adjust background image for smaller screens */
     }
 }

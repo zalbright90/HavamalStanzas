@@ -30,12 +30,30 @@ function getDailyStanza() {
 
 function displayDailyStanza() {
     const stanzaElement = document.getElementById("stanza");
+    const tiktokElement = document.getElementById("tiktok-embed");
     const dailyStanza = getDailyStanza();
     if (dailyStanza) {
         stanzaElement.textContent = dailyStanza.norse;
         updateRunicTranslation();
     } else {
         console.error('No stanza available');
+    }
+    if (dailyStanza.tiktokId) {
+        setMessage();
+        setTimeout(() => {
+            tiktokElement.innerHTML = `
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@huginn001/video/${dailyStanza.tiktokId}" data-video-id="${dailyStanza.tiktokId}">
+                    <section><p>Huginn001's Humorous Havamal</p></section>
+                </blockquote>
+            `;
+            const script = document.createElement('script');
+            script.src = "https://www.tiktok.com/embed.js";
+            script.async = true;
+            document.body.appendChild(script);
+        }, 1000);
+    } else {
+        tiktokElement.innerHTML = '<p>No additional context available for this stanza.</p>';
+        console.log("No TikTok ID available for this stanza");
     }
 }
 
@@ -108,6 +126,31 @@ function convertToRunes(text) {
         return (index === 0 ? ':' : '') + processedSentence + ':';
     }).join('');
 }
+
+function setMessage() {
+    const messageElement = document.getElementById("message");
+    messageElement.innerHTML = `<p>Here's Huginn's Humorous Havamal video: (Main translation from Hollander, Stanza number may be slightly different)</p>`;
+}
+
+function adjustTikTokHeight() {
+    const iframe = document.querySelector('.tiktok-embed iframe');
+    if (iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+}
+
+function cleanTikTokEmbed() {
+    const embed = document.querySelector('.tiktok-embed');
+    if (embed) {
+        Array.from(embed.children).forEach(child => {
+            if (child.tagName !== 'IFRAME') {
+                child.remove();
+            }
+        });
+        adjustTikTokHeight();
+    }
+}
+
 function addTouchEventListeners(element) {
     element.addEventListener('touchstart', function(e) {
         e.preventDefault();
