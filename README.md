@@ -1,9 +1,9 @@
 # Havamal Stanzas
 
 
-## Havamal Stanza of the Day
+## Daily Havamal Stanza
 
-Welcome to the **Havamal Stanza of the Day** project! This is a simple webpage that displays a different stanza from the Havamal each day, initially shown in Old Norse. Users can click or touch the stanza to toggle between the Old Norse and English translations.
+Welcome to the Hávamál Interactive Site, a unique open-source project blending digital humanities with cultural heritage to bring the ancient Norse wisdom of the Hávamál into the digital age. This project offers a multimedia integration of historical literature and educational technology, presenting daily stanzas from this old Norse text through an interactive web design. By focusing on themes of Virtue (Góðr), Folly (Ván), and Wisdom (Vísdómr), we aim to provide insights into Norse mythology and ethical behavior while fostering community engagement and cultural preservation. This site not only serves as a resource for literary analysis and historical studies but also embodies a commitment to tech-for-good through digital storytelling and tech collaboration. Join us in exploring this rich digital literature and contributing to a cultural-preservation initiative through open-source development.
 
 ## Features
 
