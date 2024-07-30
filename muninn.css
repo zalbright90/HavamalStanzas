@@ -4,7 +4,7 @@ body {
     padding: 0;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     background: #000000;
-    color: #5c0101;
+    color: #960018;
     line-height: 1.6;
 }
 
@@ -45,7 +45,7 @@ html, body {
 
 #stanza {
     font-size: 1.4em;
-    color: #5c0101;
+    color: #960018;
     min-height: 100px;
     margin-bottom: 1.5rem;
     padding: 15px;
@@ -58,8 +58,8 @@ html, body {
     font-family: "Noto Sans Runic", sans-serif;
     font-weight: 600;
     font-size: 1.4em;
-    color: #5c0101;
-    margin-top: 1.5rem;
+    color: #960018;
+    margin-top: 0.5rem;
     padding: 15px;
     border-radius: 8px;
     word-break: break-word;
@@ -110,17 +110,17 @@ html, body {
 }
 
 #message {
-    color: #5c0101;
-    font-size: 1.2rem;
+    color: #960018;
+    font-size: 1.5rem;
     padding: 15px;
     margin-bottom: 1rem;
 }
 
 #info-text {
-    color: #640808;
+    color: #960018;
     font-size: 1em;
-    font-style: italic;
-    margin-bottom: 1rem;
+    padding-bottom: 1em;
+    border-bottom: 9px dotted #121212;
 }
 
 .disclaimer {
@@ -136,7 +136,7 @@ html, body {
 h1, h2, h3 {
     font-family: "Noto Sans Runic", sans-serif;
     margin: 0px auto;
-    color: #5c0101;
+    color: #960018;
 }
 
 h1 { font-size: 2.5rem; }
@@ -156,7 +156,7 @@ h3 { font-size: 1.5rem; }
     width: 100%;
     max-width: 325px;
     border-radius: 12px;
-    border: 9px ridge rgb(92, 1, 1);
+    border: 9px ridge #960018;
     box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
     overflow: hidden;
     margin: 0 !important;
@@ -300,7 +300,7 @@ footer p {
     }
 
     #stanza, #runic-translation, h1, h2, h3 {
-        color: #8B0000;
+        color: #960018;
     }
 
     .disclaimer, footer {
