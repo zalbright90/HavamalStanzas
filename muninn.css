@@ -34,7 +34,7 @@ body {
     border-radius: 12px;
     width: 90%;
     max-width: 600px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
     flex-grow: 1;
 }
 
@@ -42,12 +42,11 @@ body {
     font-size: 1.4em;
     color: #5c0101;
     min-height: 100px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding: 15px;
     cursor: pointer;
-    white-space: pre-wrap;
-    word-break: keep-all;
     line-height: 1.8;
+    text-align: left;
 }
 
 #runic-translation {
@@ -63,9 +62,22 @@ body {
 }
 
 .runic-text {
-    position: relative;
-    display: inline-block;
-    margin-right: 2px;
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+    z-index: 2;
+    font-family: "Noto Sans Runic", sans-serif;
+    width: max-content;
 }
 
 .runic-text::after {
@@ -123,7 +135,6 @@ h1, h2, h3 {
 }
 
 h1 { font-size: 2.5rem; }
-
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
 
@@ -141,7 +152,7 @@ h3 { font-size: 1.5rem; }
     max-width: 325px;
     border-radius: 12px;
     border: 9px ridge rgb(92, 1, 1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
     overflow: hidden;
     margin: 0 !important;
     padding: 0 !important;
@@ -165,6 +176,33 @@ h3 { font-size: 1.5rem; }
 .word {
     display: inline-block;
     margin-right: 0.2em;
+    position: relative;
+    cursor: pointer;
+}
+
+.word::after {
+    content: attr(data-runes);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+    z-index: 10;
+    font-family: "Noto Sans Runic", sans-serif;
+}
+
+.word:hover::after,
+.word.touch-active::after {
+    visibility: visible;
+    opacity: 1;
 }
 
 footer {

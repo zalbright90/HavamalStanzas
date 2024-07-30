@@ -73,46 +73,47 @@ function toggleTranslation() {
 function updateRunicTranslation() {
     const stanzaElement = document.getElementById("stanza");
     const runicTranslationElement = document.getElementById("runic-translation");
-    const text = stanzaElement.textContent;
+    const fullText = stanzaElement.textContent;
     
-    runicTranslationElement.textContent = convertToRunes(text);
-    addRunicFunctionality();
+    const runicText = convertToRunes(fullText);
+    
+    runicTranslationElement.textContent = runicText;
 }
 
 function addRunicFunctionality() {
     const stanzaElement = document.getElementById("stanza");
     const text = stanzaElement.textContent;
-    const words = text.split(/\s+/);
+    const fullRunicText = convertToRunes(text);
+    const originalWords = text.split(/\s+/);
+    const runicWords = fullRunicText.split('·');
 
     stanzaElement.innerHTML = '';
     
-    words.forEach((word, index) => {
+    originalWords.forEach((word, index) => {
         const wordSpan = document.createElement('span');
         wordSpan.className = 'word';
         
-        for (let i = 0; i < word.length; i++) {
-            const char = word[i];
-            const span = document.createElement('span');
-            span.textContent = char;
-            
-            const lowerChar = char.toLowerCase();
-            const currentRune = runeMap[lowerChar];
-            
-            if (currentRune) {
-                span.className = 'runic-text';
-                span.setAttribute('data-latin', currentRune);
-                addTouchEventListeners(span);
-            }
-            
-            wordSpan.appendChild(span);
-        }
+        const originalSpan = document.createElement('span');
+        originalSpan.className = 'original-text';
+        originalSpan.textContent = word;
+        
+        const runicSpan = document.createElement('span');
+        runicSpan.className = 'runic-text';
+        runicSpan.textContent = runicWords[index] || '';
+        
+        wordSpan.appendChild(originalSpan);
+        wordSpan.appendChild(runicSpan);
+        
+        addTouchEventListeners(wordSpan);
         
         stanzaElement.appendChild(wordSpan);
         
-        if (index < words.length - 1) {
+        if (index < originalWords.length - 1) {
             stanzaElement.appendChild(document.createTextNode(' '));
         }
     });
+
+    updateRunicTranslation();
 }
 
 function convertToRunes(text) {
@@ -176,7 +177,7 @@ function addTouchEventListeners(element) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadStanzas();  // This will load stanzas and then display one
+    loadStanzas();
 
     const container = document.querySelector('.container');
     
