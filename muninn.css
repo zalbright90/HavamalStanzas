@@ -322,7 +322,7 @@ footer p {
 
     .container {
         background-image: url(vellum-dark-75.png);
-        box-shadow: 15px 15px 30px
+        box-shadow: 15px 15px 30px #121212;
     }
 
     #stanza, #runic-translation, h1, h2, h3 {
