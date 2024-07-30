@@ -217,6 +217,12 @@ footer {
     .disclaimer, footer {
         width: 95%; 
     }
+
+    #stanza:hover, #info-text:hover, #runic-translation:hover, #message:hover {
+        /* Disable hover styles */
+        cursor: default;
+        background-color: transparent;
+    }
 }
 
 @media (max-width: 360px) {
