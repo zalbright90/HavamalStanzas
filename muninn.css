@@ -215,8 +215,13 @@ footer {
     color: #cecece;
     text-align: center;
     width: 100%;
-    margin-top: 2rem;
-    padding: 1rem 0;
+    margin: 2rem auto;
+    padding: 1rem auto;
+}
+
+footer p {
+    width:75%;
+    margin: 0 auto;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
