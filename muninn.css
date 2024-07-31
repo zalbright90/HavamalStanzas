@@ -309,6 +309,10 @@ footer p {
     transition: opacity var(--speed-3), visibility var(--speed-3);
 }
 
+.toggle-label p {
+    text-shadow: var(--text-shadow);
+}
+
 .toggle-checkbox:checked + .toggle-label {
     background-color: var(--light-text);
 }
