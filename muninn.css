@@ -277,6 +277,80 @@ footer p {
     text-shadow: var(--text-shadow);
 }
 
+.mode-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background: var(--dark-bg);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.toggle-label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 90px;
+    transition: opacity var(--speed-3), visibility var(--speed-3);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: var(--light-text);
+}
+
+.toggle-checkbox:checked + .toggle-label:after {
+    left:calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+body.dark-mode {
+    background: var(--dark-bg);
+}
+
+body.dark-mode .background-container {
+    backdrop-filter: brightness(0.8) blur(15px);
+}
+
+body.dark-mode .container {
+    background-image: var(--vellum-bg-dark);
+    box-shadow: 16px 16px 8px var(--dark-bg);
+}
+
+body.dark-mode #stanza,
+body.dark-mode #runic-translation,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3, 
+body.dark-mode ,
+body.dark-mode #info-text,
+body.dark-mode #message {
+  color: var(--accent-color);
+}
+
+body.dark-mode .disclaimer,
+body.dark-mode footer {
+  color: #a0a0a0;
+}
+
+body.dark-mode .runic-text::after {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container {
 
@@ -359,32 +433,5 @@ footer p {
 
     #tiktok-embed {
         box-shadow: 2px 2px 4px #121212;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background: var(--dark-bg);
-    }
-
-    .background-container {
-        backdrop-filter: brightness(0.8), blur(15px);
-    }
-
-    .container {
-        background-image: var(--vellum-bg-dark);
-        box-shadow: 16px 16px 8px var(--dark-bg);
-    }
-
-    #stanza, #runic-translation, h1, h2, h3 {
-        color: var(--accent-color);
-    }
-
-    .disclaimer, footer {
-        color: #a0a0a0;
-    }
-
-    .runic-text::after {
-        background-color: rgba(30, 30, 30, 0.9);
     }
 }

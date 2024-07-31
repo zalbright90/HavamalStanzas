@@ -164,6 +164,24 @@ function cleanTikTokEmbed() {
     }
 }
 
+function toggleDarkMode() {
+    const body = document.body;
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    
+    if (darkModeToggle.checked) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+  }
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('change', toggleDarkMode);
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkModeToggle.checked = true;
+    document.body.classList.add('dark-mode');
+}
+
 function addTouchEventListeners(element) {
     element.addEventListener('touchstart', function(e) {
         e.preventDefault();
