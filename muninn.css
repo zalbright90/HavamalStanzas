@@ -7,7 +7,7 @@
     --vellum-bg-dark: url(vellum-dark-75.png);
     --accent-color: #660000;
     --light-text: #cecece;
-    --dark-background:#121212;
+    --dark-bg:#121212;
 
     /* Font sizes */
     --base-font: 16px;
@@ -24,10 +24,8 @@
     /* Misc. */
     --border-r: 12px;
     --speed-3: 0.3s;
-    --box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
-    --text-shadow: 2px 2px 4px #fff; 
-
-
+    --box-shadow: 16px 16px 4px rgba(0, 0, 0, 0.9);
+    --text-shadow: 0px 0px 6px #fff; 
 }
 
 body {
@@ -66,22 +64,22 @@ html, body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 1.25rem;
-    margin: 2.25rem auto;
-    background-image: url(vellum-75.png);
-    border-radius: 12px;
+    padding: var(--spacing-large);
+    margin: calc(var(--spacing-large)* 1.5) auto;
+    background-image: var(--vellum-bg);
+    border-radius: var(--border-r);
     width: 90%;
     max-width: 600px;
-    box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow);
     flex-grow: 1;
 }
 
 #stanza {
-    font-size: 1.4em;
-    color: #960018;
+    font-size: var(--xlg-font);
+    color: var(--main-text);
     min-height: 100px;
-    margin-bottom: 1.5rem;
-    padding: 15px;
+    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-medium);
     cursor: pointer;
     line-height: 1.8;
     text-align: left;
@@ -90,10 +88,10 @@ html, body {
 #runic-translation {
     font-family: "Noto Sans Runic", sans-serif;
     font-weight: 600;
-    font-size: 1.4em;
-    color: #960018;
-    margin-top: 0.5rem;
-    padding: 15px;
+    font-size: var(--lg-font);
+    color: var(--main-text);
+    margin-top: var(--spacing-small);
+    padding: var(--spacing-medium);
     border-radius: 8px;
     word-break: break-word;
     line-height: 1.8;
@@ -108,10 +106,10 @@ html, body {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 0.8em;
+    font-size: var(--small-font);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity var(--speed-3), visibility var(--speed-3);
     white-space: nowrap;
     z-index: 2;
     font-family: "Noto Sans Runic", sans-serif;
@@ -128,10 +126,10 @@ html, body {
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 0.8em;
+    font-size: var(--small-font);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity var(--speed-3), visibility (--speed-3);
     white-space: nowrap;
     z-index: 10;
 }
@@ -143,25 +141,29 @@ html, body {
 }
 
 #message {
-    color: #960018;
-    font-size: 1.5rem;
-    padding: 15px;
-    margin-bottom: 1rem;
+    color: var(--main-text);
+    font-size: var(--lg-font);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
 }
 
 #info-text {
-    color: #960018;
-    font-size: 1em;
-    padding-bottom: 1em;
-    border-bottom: 9px dotted #121212;
+    color: var(--main-text);
+    font-size: var(--med-font);
+    padding-bottom: var(--spacing-medium);
+    border-bottom: 9px dotted var(--dark-bg);
+}
+
+#stanza, #runic-translation, #message, #info-text {
+    text-shadow: var(--text-shadow);
 }
 
 .disclaimer {
-    font-size: 0.9em;
+    font-size: var(--small-font);
     font-style: italic;
     text-align: center;
-    margin: 1.5rem auto;
-    color: #cecece;
+    margin: var(--lg-font) auto;
+    color: var(--light-text);
     width: 90%;
     max-width: 600px;
 }
@@ -169,14 +171,18 @@ html, body {
 h1, h2, h3 {
     font-family: "Noto Sans Runic", sans-serif;
     margin: 0px auto;
-    color: #960018;
+    color: var(--main-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    text-shadow: var(--text-shadow);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 { font-size: var(--xlg-font); }
+h2 { font-size: calc(var(--xlg-font) * 0.8); }
+h3 { font-size: var(--lg-font); }
 
-h3 { border-bottom: 9px dotted #121212; }
+h3 { border-bottom: 9px dotted var(--dark-bg); }
 
 .tiktok-container {
     display: flex;
@@ -184,18 +190,19 @@ h3 { border-bottom: 9px dotted #121212; }
     align-items: center;
     width: 100%;
     max-width: 340px;
-    margin: 2rem auto;
+    margin: calc(var(--spacing-large) * 2) auto;
 }
 
 .tiktok-embed {
     width: 100%;
     max-width: 325px;
     border-radius: 12px;
-    border: 9px ridge #960018;
-    box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
+    border: 9px ridge var(--accent-color);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
     margin: 0 !important;
     padding: 0 !important;
+    transition: transform var(--speed-3);
 }
 
 .tiktok-embed iframe {
@@ -212,6 +219,10 @@ h3 { border-bottom: 9px dotted #121212; }
 .tiktok-embed::after {
     display: none !important;
 }
+
+.tiktok-embed:hover {
+    transform: scale(1.05); /* Hover effect as suggested */
+  }
 
 .word {
     display: inline-block;
@@ -230,10 +241,10 @@ h3 { border-bottom: 9px dotted #121212; }
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 0.8em;
+    font-size: var(--small-font);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity var(--speed-3), visibility var(--speed-3);
     white-space: nowrap;
     z-index: 10;
     font-family: "Noto Sans Runic", sans-serif;
@@ -246,12 +257,12 @@ h3 { border-bottom: 9px dotted #121212; }
 }
 
 footer {
-    font-size: 0.8em;
-    color: #cecece;
+    font-size: var(--small-font);
+    color: var(--light-text);
     text-align: center;
     width: 100%;
-    margin: 2rem auto;
-    padding: 1rem auto;
+    margin: calc(var(--spacing-large) * 2) auto;
+    padding: var(--spacing-medium) auto;
 }
 
 footer p {
@@ -259,14 +270,20 @@ footer p {
     margin: 0 auto;
 }
 
+#license {
+    text-decoration: none;
+    color: var(--accent-color);
+    text-shadow: var(--text-shadow);
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container {
 
-        box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
     }
 
     #stanza, #runic-translation {
-        font-size: 1.5em;
+        font-size: calc(var(--lg-font) * 1.07);
     }
 
     .tiktok-embed {
@@ -276,36 +293,36 @@ footer p {
 
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
-        margin: 3rem auto;
+        padding: var(--spacing-medium);
+        margin: calc(var(--spacing-large) * 2) auto;
     }
 
     #stanza, #runic-translation {
-        font-size: 1em;
+        font-size: var(--med-font);
     }
 
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.7rem; }
-    h3 { font-size: 1.3rem; }
+    h1 { font-size: calc(var(--xlg-font) * 0.8); }
+    h2 { font-size: calc(var(--xlg-font) * 0.68); }
+    h3 { font-size: calc(var(--lg-font) * 0.87); }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
+        padding: var(--spacing-medium);
         margin: 0 auto;
         width: 85%;
     }
 
     #stanza, #runic-translation {
-        font-size: 1em;
+        font-size: var(--med-font);
     }
 
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
+    h1 { font-size: calc(var(--xlarge-font-size) * 0.72); }
+    h2 { font-size: calc(var(--xlarge-font-size) * 0.6); }
+    h3 { font-size: calc(var(--large-font-size) * 0.8); }
 
     #tiktok-embed {
-        box-shadow: 3px 3px 9px #121212;
+        box-shadow: 2px 2px 4px #121212;
     }
 
     .tiktok-embed {
@@ -319,34 +336,34 @@ footer p {
 
     .disclaimer, footer {
         width: 95%; 
-        font-size: 0.8em;
+        font-size: calc(var(--small-font-size) * 0.8);
     }
 }
 
 @media (max-width: 375px) {
     .container {
-        padding: 10px;
+        padding: calc(var(--spacing-small) * 2);
         margin: 0 auto;
         width: 85%;
     }
 
     .background-container {
         min-height: 100vh;
-        background-size: cover; /* Adjust background image for smaller screens */
+        background-size: cover;
     }
 
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.2rem; }
-    h3 { font-size: 1rem; }
+    h1 { font-size: calc(var(--xlarge-font-size) * 0.6); }
+    h2 { font-size: calc(var(--xlarge-font-size) * 0.48); }
+    h3 { font-size: var(--medium-font-size); }
 
     #tiktok-embed {
-        box-shadow: 3px 3px 9px #121212;
+        box-shadow: 2px 2px 4px #121212;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: #121212;
+        background: var(--dark-bg);
     }
 
     .background-container {
@@ -354,12 +371,12 @@ footer p {
     }
 
     .container {
-        background-image: url(vellum-dark-75.png);
-        box-shadow: 15px 15px 30px #121212;
+        background-image: var(--vellum-bg-dark);
+        box-shadow: 16px 16px 8px var(--dark-bg);
     }
 
     #stanza, #runic-translation, h1, h2, h3 {
-        color: #960018;
+        color: var(--accent-color);
     }
 
     .disclaimer, footer {
