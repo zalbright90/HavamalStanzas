@@ -1,11 +1,44 @@
+:root {
+    /* Colors, Images */
+    --main-text: #1a1a72;
+    --shadow-text: #fff;
+    --bg-color: #000000;
+    --vellum-bg: url(vellum-75.png);
+    --vellum-bg-dark: url(vellum-dark-75.png);
+    --accent-color: #660000;
+    --light-text: #cecece;
+    --dark-background:#121212;
+
+    /* Font sizes */
+    --base-font: 16px;
+    --small-font: 1rem;
+    --med-font: 1.25rem;
+    --lg-font:1.5rem;
+    --xlg-font: 2rem;
+
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+
+    /* Misc. */
+    --border-r: 12px;
+    --speed-3: 0.3s;
+    --box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.8);
+    --text-shadow: 2px 2px 4px #fff; 
+
+
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    background: #000000;
-    color: #960018;
+    background: var(--bg-color);
+    color: var(--main-text);
     line-height: 1.6;
+    font-size: var(--base-font);
 }
 
 html, body {
