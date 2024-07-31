@@ -19,11 +19,10 @@ You can see the live demo of this project at [GitHub Pages](https://zalbright90.
 
 ### Current WIP
 
-- 'Responsive Design', with accessibilty features
+
 
 ### Possible Future Features
 
-- Responsive Design: Ensure the website is fully responsive for various screen sizes, including mobile devices.
 - Runic Writing Tool: Create an interactive tool that allows users to type in Latin characters and see them converted to runic script, with transliteration.
 - Quiz or Game: Develop a quiz or game based on the wisdom found in the Hávamál to engage users and test their knowledge.
 - Related Resources: Provide links to other relevant Norse mythology resources or academic papers for further reading.
