@@ -202,7 +202,7 @@ h3 { border-bottom: 9px dotted var(--dark-bg); }
     overflow: hidden;
     margin: 0 !important;
     padding: 0 !important;
-    transition: transform var(--speed-3);
+    transition: transform var(--speed-3), box-shadow var(--speed-3);
 }
 
 .tiktok-embed iframe {
@@ -221,7 +221,8 @@ h3 { border-bottom: 9px dotted var(--dark-bg); }
 }
 
 .tiktok-embed:hover {
-    transform: scale(1.05); /* Hover effect as suggested */
+    transform: scale(1.05);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.9);
   }
 
 .word {
@@ -270,7 +271,7 @@ footer p {
     margin: 0 auto;
 }
 
-#license {
+#contact, #license {
     text-decoration: none;
     color: var(--accent-color);
     text-shadow: var(--text-shadow);
