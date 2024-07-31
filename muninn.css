@@ -310,6 +310,7 @@ footer p {
 }
 
 .toggle-label p {
+    margin: 25px auto;
     text-shadow: var(--text-shadow);
 }
 
@@ -359,6 +360,12 @@ body.dark-mode .runic-text::after {
     .container {
 
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .toggle-label p {
+        margin: 25px auto;
+        text-shadow: var(--text-shadow);
+        font-size: calc(var(--small-font) * 0.8)
     }
 
     #stanza, #runic-translation {
