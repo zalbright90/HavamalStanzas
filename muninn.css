@@ -52,7 +52,8 @@ html, body {
     align-items: center;
     flex-direction: column;
     background-image: url(odin.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
@@ -359,7 +360,7 @@ body.dark-mode .runic-text::after {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container {
 
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 4px 4px 8px (--bg-color);
     }
 
     .toggle-label p {
